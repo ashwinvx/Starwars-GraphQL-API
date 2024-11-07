@@ -39,104 +39,98 @@ query Films {
 }
 ```
 
-2.Fetch a Specific Character:
+2.Fetch a Specific Character:`
 
-````Query
+```Query
 query Person {
-person(id: "cGVvcGxlOjEz"){
-name
+  person(id: "cGVvcGxlOjEz"){
+    name
+  }
 }
-}
-
 ```
 
 ```Response
 {
-"data": {
-"person": {
-"name": "Chewbacca"
+  "data": {
+    "person": {
+      "name": "Chewbacca"
+    }
+  }
 }
-}
-}
-
 ```
 
 3.Explore Planets:
 
 ```Query
 query Planets {
-allPlanets(first: 5) {
-planets {
-name
+  allPlanets(first: 5) {
+    planets {
+      name
+    }
+  }
 }
-}
-}
-
 ```
 
 ```Response
 {
-"data": {
-"allPlanets": {
-"planets": [
-{
-"name": "Tatooine"
-},
-{
-"name": "Alderaan"
-},
-{
-"name": "Yavin IV"
-},
-{
-"name": "Hoth"
-},
-{
-"name": "Dagobah"
+  "data": {
+    "allPlanets": {
+      "planets": [
+        {
+          "name": "Tatooine"
+        },
+        {
+          "name": "Alderaan"
+        },
+        {
+          "name": "Yavin IV"
+        },
+        {
+          "name": "Hoth"
+        },
+        {
+          "name": "Dagobah"
+        }
+      ]
+    }
+  }
 }
-]
-}
-}
-}
-
 ```
 
 4.Starships Information:
 
 ```Query
 query AllStarships {
-allStarships(first: 3) {
-starships {
-name
-model
+  allStarships(first: 3) {
+    starships {
+      name
+      model
+    }
+  }
 }
-}
-}
-
 ```
 
 ```Response
 {
-"data": {
-"allStarships": {
-"starships": [
-{
-"name": "CR90 corvette",
-"model": "CR90 corvette"
-},
-{
-"name": "Star Destroyer",
-"model": "Imperial I-class Star Destroyer"
-},
-{
-"name": "Sentinel-class landing craft",
-"model": "Sentinel-class landing craft"
+  "data": {
+    "allStarships": {
+      "starships": [
+        {
+          "name": "CR90 corvette",
+          "model": "CR90 corvette"
+        },
+        {
+          "name": "Star Destroyer",
+          "model": "Imperial I-class Star Destroyer"
+        },
+        {
+          "name": "Sentinel-class landing craft",
+          "model": "Sentinel-class landing craft"
+        }
+      ]
+    }
+  }
 }
-]
-}
-}
-}
-
 ```
 
 5.Character and Their Starships:
@@ -178,4 +172,3 @@ model
 ```Response
 
 ```
-````
