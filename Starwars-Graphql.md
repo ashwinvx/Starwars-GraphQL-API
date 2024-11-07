@@ -41,16 +41,16 @@ query Films {
 
 2.Fetch a Specific Character:
 
-###Query
+````Query
 query Person {
 person(id: "cGVvcGxlOjEz"){
 name
 }
 }
 
-###
+```
 
-###Response
+```Response
 {
 "data": {
 "person": {
@@ -59,11 +59,11 @@ name
 }
 }
 
-###
+```
 
 3.Explore Planets:
 
-###Query
+```Query
 query Planets {
 allPlanets(first: 5) {
 planets {
@@ -72,9 +72,9 @@ name
 }
 }
 
-###
+```
 
-###Response
+```Response
 {
 "data": {
 "allPlanets": {
@@ -99,11 +99,11 @@ name
 }
 }
 
-###
+```
 
 4.Starships Information:
 
-###Query
+```Query
 query AllStarships {
 allStarships(first: 3) {
 starships {
@@ -113,9 +113,9 @@ model
 }
 }
 
-###
+```
 
-###Response
+```Response
 {
 "data": {
 "allStarships": {
@@ -137,44 +137,45 @@ model
 }
 }
 
-###
+```
 
 5.Character and Their Starships:
 
-###Query
+```Query
 
-###
+```
 
-###Response
+```Response
 
-###
+```
 
 6.Species and Their Languages:
 
-###Query
+```Query
 
-###
+```
 
-###Response
+```Response
 
-###
+```
 
 7.Planets and Their Climates:
 
-###Query
+```Query
 
-###
+```
 
-###Response
+```Response
 
-###
+```
 
 8.Vehicles and Their Costs:
 
-###Query
+```Query
 
-###
+```
 
-###Response
+```Response
 
-###
+```
+````
