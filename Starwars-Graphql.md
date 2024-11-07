@@ -1,7 +1,7 @@
 1. List All Films:
 
 ```Query
-query Films {
+{
   allFilms {
     films {
       title
@@ -42,7 +42,7 @@ query Films {
 2.Fetch a Specific Character:`
 
 ```Query
-query Person {
+{
   person(id: "cGVvcGxlOjEz"){
     name
   }
@@ -62,7 +62,7 @@ query Person {
 3.Explore Planets:
 
 ```Query
-query Planets {
+{
   allPlanets(first: 5) {
     planets {
       name
@@ -100,7 +100,7 @@ query Planets {
 4.Starships Information:
 
 ```Query
-query AllStarships {
+{
   allStarships(first: 3) {
     starships {
       name
@@ -136,39 +136,203 @@ query AllStarships {
 5.Character and Their Starships:
 
 ```Query
-
+{
+  allPeople(first: 5) {
+    people {
+      name
+      starshipConnection {
+        starships {
+          name
+        }
+      }
+    }
+  }
+}
 ```
 
 ```Response
-
+{
+  "data": {
+    "allPeople": {
+      "people": [
+        {
+          "name": "Luke Skywalker",
+          "starshipConnection": {
+            "starships": [
+              {
+                "name": "X-wing"
+              },
+              {
+                "name": "Imperial shuttle"
+              }
+            ]
+          }
+        },
+        {
+          "name": "C-3PO",
+          "starshipConnection": {
+            "starships": []
+          }
+        },
+        {
+          "name": "R2-D2",
+          "starshipConnection": {
+            "starships": []
+          }
+        },
+        {
+          "name": "Darth Vader",
+          "starshipConnection": {
+            "starships": [
+              {
+                "name": "TIE Advanced x1"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Leia Organa",
+          "starshipConnection": {
+            "starships": []
+          }
+        }
+      ]
+    }
+  }
+}
 ```
 
 6.Species and Their Languages:
 
 ```Query
-
+{
+  allSpecies(first: 5) {
+    species {
+      name
+      language
+    }
+  }
+}
 ```
 
 ```Response
-
+{
+  "data": {
+    "allSpecies": {
+      "species": [
+        {
+          "name": "Human",
+          "language": "Galactic Basic"
+        },
+        {
+          "name": "Droid",
+          "language": "n/a"
+        },
+        {
+          "name": "Wookie",
+          "language": "Shyriiwook"
+        },
+        {
+          "name": "Rodian",
+          "language": "Galatic Basic"
+        },
+        {
+          "name": "Hutt",
+          "language": "Huttese"
+        }
+      ]
+    }
+  }
+}
 ```
 
 7.Planets and Their Climates:
 
 ```Query
-
+{
+  allPlanets(first:5) {
+    planets {
+      name
+      climates
+    }
+  }
+}
 ```
 
 ```Response
-
+{
+  "data": {
+    "allPlanets": {
+      "planets": [
+        {
+          "name": "Tatooine",
+          "climates": [
+            "arid"
+          ]
+        },
+        {
+          "name": "Alderaan",
+          "climates": [
+            "temperate"
+          ]
+        },
+        {
+          "name": "Yavin IV",
+          "climates": [
+            "temperate",
+            "tropical"
+          ]
+        },
+        {
+          "name": "Hoth",
+          "climates": [
+            "frozen"
+          ]
+        },
+        {
+          "name": "Dagobah",
+          "climates": [
+            "murky"
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 8.Vehicles and Their Costs:
 
 ```Query
-
+{
+  allVehicles(first: 3) {
+    vehicles {
+      name
+      costInCredits
+    }
+  }
+}
 ```
 
 ```Response
-
+{
+  "data": {
+    "allVehicles": {
+      "vehicles": [
+        {
+          "name": "Sand Crawler",
+          "costInCredits": 150000
+        },
+        {
+          "name": "T-16 skyhopper",
+          "costInCredits": 14500
+        },
+        {
+          "name": "X-34 landspeeder",
+          "costInCredits": 10550
+        }
+      ]
+    }
+  }
+}
 ```
